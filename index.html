@@ -9,7 +9,6 @@
         <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
         <meta name="author" content="Muhammad Morshed">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="img/fav.png" type="image/png">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<!-- Fontawesome Icon font -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -27,6 +26,26 @@
         <link rel="stylesheet" href="css/main.css">
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
+		<script>
+		  document.onkeydown = function(e) {
+			if(e.keyCode == 123) {
+			 return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+			 return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+			 return false;
+			}
+			if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+			 return false;
+			}
+
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+			 return false;
+			}      
+		 }
+		</script>
     </head>
     <body id="body">
 
@@ -486,12 +505,7 @@ If you are ready to leverage you experience and career, send in your resume at c
 			<!-- end Contact section -->
 			
 			<section id="google-map">
-				<div class="Flexible-container" style="padding:100px;border:4px solid #ccc;border-radius:4px;">
-				  <br /><br />
-
-				 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.8629442027104!2d-75.5572626849691!3d39.96681687941995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6f18bb4cf26a5%3A0xd3c2948b9235e8ad!2s1240+West+Chester+Pike%2C+West+Chester%2C+PA+19382%2C+USA!5e0!3m2!1sen!2sin!4v1500786611194" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-				</div>
+				<div id="map-canvas" class="wow animated fadeInUp"></div>
 			</section>
 		
 		</main>
